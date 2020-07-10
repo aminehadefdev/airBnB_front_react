@@ -1,0 +1,14 @@
+.items_nav{
+    height: 60px;
+    width: 25%;
+}
+.svg{
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: visible;
+
+    color: pink;
+    width: 30px;
+    height: 30px;
+}
