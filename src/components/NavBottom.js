@@ -2,18 +2,23 @@ import React from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 import ModelSignUp from './ModelSignUp'
+import ModelSignIn from './ModalSignin'
 import '../assets/css/navBottome.css'
 
 class NavBottom extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            ModelSignUpShow: false
+            ModelSignUpShow: false,
+            ModelSignInShow: false
         }
     }
     render() {
         let ModelSignUpClose = () => {
             this.setState({ ModelSignUpShow: false })
+        }
+        let ModelSignInClose = () => {
+            this.setState({ ModelSignInShow: false })
         }
         return (
             <Nav className="fixed-bottom d-flex justify-content-center" variant="tabs" defaultActiveKey="/home">
@@ -29,7 +34,7 @@ class NavBottom extends React.Component {
                         <p>Enregistrer</p>
                     </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="items_nav">
+                <Nav.Item className="items_nav" onClick={() => this.setState({ ModelSignInShow: true })}>
                     <Nav.Link eventKey="Connexion" className="d-flex flex-column justify-content-center align-items-center">
                         <svg className="svg" viewBox="0 0 24 24" fill="currentColor" fillOpacity="0" stroke="currentColor" strokeWidth="1.5" focusable="false" aria-hidden="true" role="presentation" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10.5"></circle><path d="M4.6 19.2c-.1-1.4 1.7-2.9 5.4-4.5-1-1-1.4-1.7-1.4-3.7S9 6.5 12 6.5s3.5 2.4 3.4 4.5c0 2.1-.4 2.7-1.4 3.8 5.1 2.1 5.4 3.4 5.4 4.4"></path></svg>
                         <p>Connexion</p>
@@ -45,6 +50,10 @@ class NavBottom extends React.Component {
                     show={this.state.ModelSignUpShow}
                     onHide={ModelSignUpClose}
                 />
+                <ModelSignIn
+                    show={this.state.ModelSignInShow}
+                    onHide={ModelSignInClose}
+                ></ModelSignIn>
             </Nav>
         )
     }

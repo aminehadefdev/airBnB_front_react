@@ -1,0 +1,22 @@
+.container-searche{
+    margin-top: 10px;
+}
+.form-searche{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-groups{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.searche-input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.searche-btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}

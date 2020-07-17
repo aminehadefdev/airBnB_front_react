@@ -2,20 +2,20 @@ import React from 'react';
 import { Modal, Button, Alert } from 'react-bootstrap';
 import '../assets/css/ModelSignUp.css'
 
-import Formregisteruser from './Formregisteruser'
+import Formloginuser from './formloginuser'
 
-class ModelSignUp extends React.Component {
+class ModelSignIn extends React.Component {
     render() {
         return (
             <div>
                 <Modal {...this.props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered >
                     <Modal.Header closeButton>
                         <Modal.Title id="contained-modal-title-vcenter">
-                            <h3>Inscription</h3>
+                            <h3>Connexion</h3>
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <Formregisteruser></Formregisteruser>
+                        <Formloginuser></Formloginuser>
                     </Modal.Body>
                 </Modal>
             </div>
@@ -23,4 +23,4 @@ class ModelSignUp extends React.Component {
     }
 }
 
-export default ModelSignUp
+export default ModelSignIn
